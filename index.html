@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A História do Nazismo: Educação, Memória e Alerta</title>
-    <meta name="description" content="Portal educativo sobre a história do nazismo: ascensão, ideologia, vídeos históricos, mapa tático da guerra, holocausto e leis contra a apologia.">
+    <meta name="description" content="Portal educativo sobre a história do nazismo: ascensão, ideologia, vídeos históricos, o discurso de Chaplin, mapa tático da guerra e leis contra apologia.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -105,7 +105,6 @@
             box-shadow: 0 0 40px rgba(139, 0, 0, 0.15);
         }
 
-        /* Imagem real de mapa da Europa ao fundo estilizada como radar tático */
         .map-board::before {
             content: '';
             position: absolute;
@@ -118,7 +117,6 @@
             z-index: 1;
         }
 
-        /* Grade Tática sobre o mapa */
         .map-board::after {
             content: '';
             position: absolute;
@@ -184,7 +182,6 @@
             mix-blend-mode: screen;
         }
 
-        /* Range Slider Styling */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -221,6 +218,12 @@
             );
             border: 2px solid #dc2626;
         }
+
+        .chaplin-bg {
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-red-900 selection:text-white">
@@ -238,13 +241,13 @@
             </button>
 
             <!-- Desktop Nav -->
-            <div class="hidden md:flex gap-5 text-[11px] font-bold tracking-widest text-zinc-400 uppercase">
+            <div class="hidden md:flex gap-4 text-[11px] font-bold tracking-widest text-zinc-400 uppercase">
                 <a href="#homenagem" class="hover:text-white transition-colors">Início</a>
                 <a href="#ideologia" class="hover:text-white transition-colors">Ideologia</a>
                 <a href="#censura" class="hover:text-white transition-colors">Censura</a>
                 <a href="#arquivos" class="hover:text-white transition-colors">Vídeos</a>
                 <a href="#mapa-interativo" class="hover:text-red-500 transition-colors"><i class="fas fa-crosshairs text-red-700 mr-1"></i> Mapa</a>
-                <a href="#holocausto" class="hover:text-white transition-colors">Holocausto</a>
+                <a href="#chaplin" class="hover:text-white transition-colors">A Arte</a>
                 <a href="#crime" class="hover:text-red-500 transition-colors border border-red-900/50 px-2 py-1 rounded">Aviso Legal</a>
             </div>
         </div>
@@ -255,10 +258,10 @@
                 <a href="#homenagem" class="block hover:text-white">Início</a>
                 <a href="#o-caos" class="block hover:text-white">O Caos</a>
                 <a href="#ideologia" class="block hover:text-white">Ideologia</a>
-                <a href="#censura" class="block hover:text-white">Como a Censura Escondeu a Ditadura</a>
+                <a href="#censura" class="block hover:text-white">Censura</a>
                 <a href="#arquivos" class="block hover:text-white">Vídeos Históricos</a>
                 <a href="#mapa-interativo" class="block hover:text-red-500">Mapa de Guerra</a>
-                <a href="#holocausto" class="block hover:text-white">Holocausto</a>
+                <a href="#chaplin" class="block hover:text-white">O Discurso de Chaplin</a>
                 <a href="#crime" class="block hover:text-red-500 mt-4 border-t border-red-900 pt-4">Crime de Apologia</a>
             </div>
         </div>
@@ -358,7 +361,7 @@
 
         <div class="section-divider"></div>
 
-        <!-- 3. CENSURA E O DESCONHECIMENTO (FOCO NO PEDIDO DO USUÁRIO) -->
+        <!-- 3. CENSURA E O DESCONHECIMENTO -->
         <section id="censura" class="scroll-mt-24 max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <span class="text-red-500 font-bold tracking-widest text-sm uppercase">O Sequestro da Realidade</span>
@@ -371,22 +374,19 @@
                     <p>
                         Muitas pessoas perguntam hoje: <strong>"Como é que a população não sabia que estava numa ditadura tão cruel?"</strong> A resposta está na ausência total de informações externas e na criação engenhosa de uma bolha de falsa normalidade.
                     </p>
-                    <p>
-                        Numa época sem internet ou redes sociais, a verdade era apenas o que o governo permitia imprimir ou transmitir.
-                    </p>
                     
                     <ul class="space-y-6 mt-8">
                         <li class="bg-[#050505] p-5 rounded border-l-4 border-zinc-500">
                             <strong class="text-white block text-xl mb-1">1. O Rádio sem Mundo Exterior</strong>
-                            <span class="text-sm">O governo fabricou o <em>Volksempfänger</em> (Rádio do Povo), vendido quase de graça para estar em todas as casas. O truque? O rádio era desenhado para ter um alcance curto. <strong>Não conseguia sintonizar rádios de outros países.</strong> As pessoas só ouviam os discursos hipnotizantes do regime. Ouvir rádios estrangeiras (como a BBC) dava pena de morte.</span>
+                            <span class="text-sm">O governo fabricou o <em>Volksempfänger</em> (Rádio do Povo), para estar em todas as casas. O truque? <strong>Não conseguia sintonizar rádios de outros países.</strong> As pessoas só ouviam os discursos do regime. Ouvir a rádio internacional dava pena de morte.</span>
                         </li>
                         <li class="bg-[#050505] p-5 rounded border-l-4 border-zinc-500">
                             <strong class="text-white block text-xl mb-1">2. Queima de Livros e "Notícias"</strong>
-                            <span class="text-sm">Todo o jornalismo livre foi erradicado. Livros de ciências, oposições e autores judeus foram queimados nas praças em 1933. Se não existia no jornal nazista, simplesmente "não acontecia" no mundo real da população.</span>
+                            <span class="text-sm">Todo o jornalismo livre foi erradicado. Se não existia no jornal estatal, simplesmente "não acontecia". O acesso à realidade objetiva foi extinto.</span>
                         </li>
                         <li class="bg-[#050505] p-5 rounded border-l-4 border-red-700">
                             <strong class="text-white block text-xl mb-1">3. O Medo Invisível e a Cumplicidade</strong>
-                            <span class="text-sm">Para o cidadão alemão "ariano" comum que obedecia as regras, a vida parecia estar a melhorar. Havia empregos, férias e ruas limpas. Eles não viam a Gestapo (Polícia Secreta). A Gestapo tinha poucos agentes oficiais; ela funcionava primariamente porque <strong>os próprios vizinhos e familiares denunciavam uns aos outros</strong>. A sociedade auto-regulava o seu próprio terror em troca de pão e falsa estabilidade.</span>
+                            <span class="text-sm">Para o cidadão que obedecia, a vida parecia estar a melhorar. A Gestapo (Polícia Secreta) tinha poucos agentes; ela funcionava porque <strong>os próprios vizinhos e familiares denunciavam uns aos outros</strong>. A sociedade auto-regulava o seu próprio terror em troca de falsa segurança.</span>
                         </li>
                     </ul>
                 </div>
@@ -397,8 +397,7 @@
                         <br><br><span class="text-red-500 font-bold text-sm not-italic uppercase">— Princípio de Propaganda de Joseph Goebbels</span>
                     </div>
                     
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/1933-05-10_Studenten_vor_dem_Reichstag_B%C3%BCcherverbrennung.jpg" alt="" class="rounded shadow-xl grayscale border border-zinc-800" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Reichstag_after_the_allied_bombing_of_Berlin.jpg/800px-Reichstag_after_the_allied_bombing_of_Berlin.jpg'">
-                    <p class="text-xs text-zinc-500 text-center">Queima pública de milhares de livros em 1933. O fim do livre pensamento.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/1933-05-10_Studenten_vor_dem_Reichstag_B%C3%BCcherverbrennung.jpg" alt="" class="rounded shadow-xl grayscale border border-zinc-800">
                 </div>
             </div>
         </section>
@@ -409,19 +408,39 @@
         <section id="arquivos" class="scroll-mt-24 bg-[#050505] p-6 md:p-12 rounded-xl border border-zinc-900 shadow-2xl">
             <div class="text-center mb-12">
                 <span class="text-zinc-500 font-bold tracking-widest text-sm uppercase">Registos Audiovisuais</span>
-                <h2 class="text-3xl md:text-4xl text-white font-cinzel font-bold mt-2 mb-4"><i class="fas fa-film mr-2 text-zinc-600"></i> A Teatralidade da Ditadura</h2>
+                <h2 class="text-3xl md:text-4xl text-white font-cinzel font-bold mt-2 mb-4"><i class="fas fa-film mr-2 text-zinc-600"></i> A Teatralidade e a Lavagem Cerebral</h2>
                 <p class="text-zinc-400 max-w-4xl mx-auto text-sm md:text-base">
-                    Estes registos históricos são as provas visuais de como a manipulação de massas foi orquestrada.
+                    Provas em vídeo de como a manipulação de massas foi orquestrada e como os Aliados tentavam alertar o mundo.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Disney Animation (NOVO) -->
+                <div class="space-y-4 md:col-span-2 lg:col-span-2 bg-black/50 p-6 rounded-lg border border-red-900/30">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/zfdBLPKTcM4" title="Educação para a Morte (1943)" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="bg-red-900 text-white text-xs px-2 py-1 rounded mb-2 inline-block font-bold">ANIMAÇÃO DE ALERTA ALIADA</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Como ele dominava a mente (1943)</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">
+                                <strong>"Education for Death" (Educação para a Morte)</strong> é uma famosa animação antinazista produzida por Walt Disney durante a guerra. Ela demonstra, de forma assustadora e didática, como o regime capturava a mente das crianças desde o nascimento. O vídeo retrata a destruição sistemática da empatia infantil e a lavagem cerebral que transformava inocentes em fanáticos e frios "soldados cegos" dispostos a morrer pelo líder.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vídeos Históricos originais -->
                 <div class="space-y-4">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/LMbd-UYyEd0" title="Congresso Nazista em Nuremberg (1936)" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-lg font-bold text-white">Congresso em Nuremberg (1936)</h3>
-                    <p class="text-xs text-zinc-400">Comícios massivos desenhados para fazer o indivíduo sentir-se esmagado pela grandiosidade militar do Estado. O uso de luzes apontadas para o céu simulava uma "catedral de luz", gerando fanatismo quase religioso.</p>
+                    <p class="text-xs text-zinc-400">Comícios massivos desenhados para fazer o indivíduo sentir-se esmagado pela grandiosidade militar do Estado. O uso de luzes apontadas para o céu gerava fanatismo religioso.</p>
                 </div>
 
                 <div class="space-y-4">
@@ -429,7 +448,7 @@
                         <iframe src="https://www.youtube.com/embed/FJ3N_2r6R-o" title="Discurso na Fábrica Krupp (1935)" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-lg font-bold text-white">Discurso na Fábrica Krupp (1935)</h3>
-                    <p class="text-xs text-zinc-400">Discurso para a classe operária na gigante indústria de aço. A ditadura fingia ser aliada dos trabalhadores, mascarando o facto de que os estavam a forçar a fabricar armas para uma guerra secreta iminente.</p>
+                    <p class="text-xs text-zinc-400">A ditadura fingia ser aliada da classe operária, mascarando o facto de que os forçava a fabricar armas pesadas para uma guerra iminente.</p>
                 </div>
 
                 <div class="space-y-4">
@@ -437,7 +456,7 @@
                         <iframe src="https://www.youtube.com/embed/ebYvF0aE_Ko" title="Conferência de Imprensa Estrangeira (1933)" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-lg font-bold text-white">Farsa para a Imprensa Estrangeira (1933)</h3>
-                    <p class="text-xs text-zinc-400">Nos primeiros anos, o regime manipulava ativamente repórteres internacionais, vendendo a imagem de um governo moderno, razoável e diplomático, enquanto a brutalidade já dominava as prisões políticas.</p>
+                    <p class="text-xs text-zinc-400">Nos primeiros anos, o regime manipulava ativamente repórteres internacionais, vendendo a imagem de um governo diplomático, enquanto o terror já dominava o país.</p>
                 </div>
 
                 <div class="space-y-4">
@@ -445,31 +464,28 @@
                         <iframe src="https://www.youtube.com/embed/HLrrUsnRTf4" title="Goebbels discursa em comício (1937)" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-lg font-bold text-white">Joseph Goebbels em Comício (1937)</h3>
-                    <p class="text-xs text-zinc-400">O Ministro da Propaganda e arquiteto da censura em ação. A sua retórica inflamada era capaz de incitar turbas à violência cega, justificando agressões sob o disfarce de "defesa nacional".</p>
+                    <p class="text-xs text-zinc-400">O Ministro da Propaganda dominava a retórica inflamada para incitar turbas à violência cega, justificando agressões e ódio sob o disfarce de "defesa nacional".</p>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- 5. O MAPA DA GUERRA (ATUALIZADO E MELHORADO VISUALMENTE) -->
+        <!-- 5. O MAPA DA GUERRA TÁTICO -->
         <section id="mapa-interativo" class="scroll-mt-24">
             <div class="text-center mb-10">
                 <span class="text-red-500 font-bold tracking-widest text-sm uppercase">Teatro de Operações</span>
                 <h2 class="text-3xl md:text-5xl text-white font-cinzel font-bold mt-2">Mapa Tático e Estratégia</h2>
-                <p class="text-zinc-400 max-w-3xl mx-auto mt-4">Deslize a barra do tempo para acompanhar o avanço e o recuo. Acompanhe as decisões que garantiram vitórias efêmeras e o erro crucial que garantiu a sua queda.</p>
+                <p class="text-zinc-400 max-w-3xl mx-auto mt-4">Deslize a barra do tempo. Acompanhe as decisões que garantiram vitórias efêmeras e o erro crucial que garantiu a sua queda no mapa da Europa.</p>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-8 bg-[#0a0a0a] border border-zinc-800 p-3 md:p-6 rounded-2xl shadow-2xl">
-                
-                <!-- Coluna do Mapa Tático (Esquerda) -->
+                <!-- Coluna do Mapa Tático -->
                 <div class="lg:w-3/5 space-y-8 flex flex-col justify-center">
                     <div class="map-board" id="war-map">
                         <div class="map-content-layer">
-                            <!-- O "Território do Eixo" crescendo (Blob vermelho) -->
                             <div class="territory-blob" id="axis-blob" style="left: 48%; top: 48%; width: 200px; height: 160px;"></div>
                             
-                            <!-- Nodos Estratégicos (Cidades) ajustados a uma projeção genérica da Europa -->
                             <div class="map-node" id="node-berlin" style="left: 51%; top: 45%;"></div>
                             <div class="map-label" style="left: 51%; top: 45%;">Berlim</div>
 
@@ -493,7 +509,6 @@
                         </div>
                     </div>
 
-                    <!-- Controle Deslizante Tático -->
                     <div class="px-4">
                         <input type="range" id="year-slider" min="1933" max="1945" value="1933" step="1">
                         <div class="flex justify-between text-zinc-500 text-xs font-bold mt-3 font-mono">
@@ -502,7 +517,7 @@
                     </div>
                 </div>
 
-                <!-- Coluna de Informações Estratégicas (Direita) -->
+                <!-- Coluna de Informações -->
                 <div class="lg:w-2/5 flex flex-col justify-center space-y-6 bg-black p-6 rounded-xl border border-zinc-900">
                     <div class="border-b border-zinc-800 pb-4">
                         <h3 class="text-6xl font-black text-white font-cinzel mb-2" id="display-year" style="text-shadow: 0 0 20px rgba(255,255,255,0.2);">1933</h3>
@@ -511,24 +526,18 @@
                     </div>
                     
                     <div class="space-y-4 pt-2">
-                        <!-- Decisões de Expansão -->
                         <div>
                             <h4 class="text-zinc-500 text-xs uppercase tracking-widest font-bold mb-2 flex items-center gap-2">
                                 <i class="fas fa-crosshairs text-green-600"></i> Decisões e Vitórias
                             </h4>
-                            <div class="bg-zinc-900/80 p-4 rounded border-l-2 border-green-700 text-sm shadow-inner" id="display-rise">
-                                Eliminação de toda a oposição política; início do rearmamento.
-                            </div>
+                            <div class="bg-zinc-900/80 p-4 rounded border-l-2 border-green-700 text-sm shadow-inner" id="display-rise"></div>
                         </div>
 
-                        <!-- Erros Fatais -->
                         <div id="fall-container" style="display: none;">
                             <h4 class="text-zinc-500 text-xs uppercase tracking-widest font-bold mb-2 flex items-center gap-2 mt-6">
                                 <i class="fas fa-skull text-red-600"></i> O Erro Fatal
                             </h4>
-                            <div class="bg-red-950/20 p-4 rounded border-l-2 border-red-700 text-sm text-red-100 shadow-inner" id="display-fall">
-                                <!-- JS -->
-                            </div>
+                            <div class="bg-red-950/20 p-4 rounded border-l-2 border-red-700 text-sm text-red-100 shadow-inner" id="display-fall"></div>
                         </div>
                     </div>
                 </div>
@@ -547,7 +556,6 @@
 
             <div class="relative max-w-4xl mx-auto mb-20">
                 <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-red-900/50 transform -translate-x-1/2"></div>
-                <!-- Fases da Solução Final -->
                 <div class="relative flex items-center justify-between w-full mb-12">
                     <div class="hidden md:block w-5/12"></div>
                     <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-zinc-600 transform -translate-x-1/2 z-10 border-4 border-black"></div>
@@ -559,7 +567,7 @@
                 <div class="relative flex items-center justify-between w-full mb-12 flex-row-reverse md:flex-row">
                     <div class="w-full pl-12 md:pl-0 md:w-5/12 md:text-right">
                         <h4 class="text-xl font-bold text-white mb-2">Fase 2: Guetos (1939+)</h4>
-                        <p class="text-sm text-zinc-400">Aprisionamento em bairros murados na Polónia ocupada. Mortes massivas por fome e doenças deliberadas.</p>
+                        <p class="text-sm text-zinc-400">Aprisionamento em bairros murados na Europa Oriental. Mortes massivas por fome e doenças deliberadas.</p>
                     </div>
                     <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-red-800 transform -translate-x-1/2 z-10 border-4 border-black"></div>
                     <div class="hidden md:block w-5/12"></div>
@@ -579,10 +587,10 @@
                 <div class="lg:w-2/3 space-y-6">
                     <h2 class="text-3xl md:text-4xl text-white font-cinzel font-bold">O Colapso e a Guerra Fria</h2>
                     <p>
-                        Em maio de 1945, com Berlim invadida, o ditador cometeu suicídio. A Alemanha, totalmente destruída, rendeu-se. O país foi dividido entre as potências vencedoras (EUA, França, Reino Unido e a União Soviética comunista).
+                        Em maio de 1945, com Berlim invadida, o ditador cometeu suicídio. A Alemanha, totalmente destruída, rendeu-se. O país foi dividido entre as potências vencedoras (EUA, França, Reino Unido e a União Soviética).
                     </p>
                     <p>
-                        Esta divisão criou a <strong>Alemanha Ocidental</strong> e a <strong>Alemanha Oriental</strong>, separadas depois pelo Muro de Berlim. As cinzas do Nazismo marcaram o início da <strong>Guerra Fria</strong>, que separou famílias e dividiu o mundo até ao fim do século XX.
+                        Esta divisão separou as nações na <strong>Alemanha Ocidental</strong> (democrática) e a <strong>Alemanha Oriental</strong> (comunista), divididas depois pelo famigerado Muro de Berlim. O fim da 2ª Guerra foi o marco zero da <strong>Guerra Fria</strong>.
                     </p>
                 </div>
                 <div class="lg:w-1/3 flex flex-col justify-center">
@@ -590,47 +598,76 @@
                         <i class="fas fa-gavel text-4xl text-zinc-500 mb-4"></i>
                         <h4 class="text-white font-bold mb-2">Julgamentos de Nuremberg</h4>
                         <p class="text-xs text-zinc-400">
-                            Líderes do Estado foram julgados por "Crimes Contra a Humanidade". Estabeleceu-se a lei moral e jurídica de que <strong>"obedecer a ordens" não justifica atrocidades</strong>.
+                            Líderes do Estado foram julgados por "Crimes Contra a Humanidade". Estabeleceu-se a lei moral de que <strong>"obedecer a ordens" não justifica atrocidades</strong>.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. AVISO LEGAL DE CRIME DE APOLOGIA (NOVA SEÇÃO PEDIDA PELO USUÁRIO) -->
-        <section id="crime" class="scroll-mt-24 max-w-4xl mx-auto pt-10">
+    </main>
+
+    <!-- 7. A RESPOSTA DA ARTE: CHAPLIN (NOVA SEÇÃO PEDIDA PELO USUÁRIO) -->
+    <section id="chaplin" class="chaplin-bg py-24 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2 space-y-6">
+                    <span class="text-zinc-400 font-bold tracking-widest text-sm uppercase">O Antídoto Contra o Ódio</span>
+                    <h2 class="text-4xl md:text-5xl text-white font-cinzel font-bold">O Maior Discurso do Cinema</h2>
+                    <p class="text-lg text-zinc-300 font-lora italic border-l-4 border-zinc-600 pl-4">
+                        "Mais do que máquinas, precisamos de humanidade. Mais do que de inteligência, precisamos de afeição e doçura."
+                    </p>
+                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+                        No auge da guerra em 1940, Charles Chaplin lançou a maior obra de propaganda antinazista já existente: <strong>"O Grande Ditador"</strong>. Num ato de extrema coragem, Chaplin zombou abertamente de Hitler através da comédia e da emoção.
+                    </p>
+                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+                        O filme conta a história de um humilde barbeiro judeu (um ex-soldado com amnésia da Primeira Guerra) que é confundido com um ditador antissemita impiedoso (Adenoid Hynkel). No clímax do filme, o pequeno barbeiro é forçado a fazer um discurso para as tropas. Em vez de ódio, ele profere um <strong>clamor universal e inesquecível pela paz, união e democracia</strong>. A arte respondeu à barbárie com humanidade.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="video-container border-4 border-zinc-800 shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+                        <iframe src="https://www.youtube.com/embed/o6ppwiq2IYA" title="Discurso de O Grande Ditador - Chaplin" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-xs text-zinc-500 text-center mt-4 uppercase tracking-widest font-bold">Charles Chaplin, "O Grande Ditador" (1940)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. AVISO LEGAL DE CRIME DE APOLOGIA -->
+    <section id="crime" class="bg-[#050505] py-20">
+        <div class="max-w-4xl mx-auto px-6">
             <div class="legal-warning p-8 rounded-xl shadow-2xl relative overflow-hidden text-center">
                 <div class="absolute inset-0 bg-red-900/10 mix-blend-color-burn pointer-events-none"></div>
                 <i class="fas fa-exclamation-triangle text-5xl text-red-500 mb-6 drop-shadow-[0_0_10px_red]"></i>
                 <h2 class="text-3xl text-white font-bold mb-4 uppercase tracking-widest font-cinzel">Aviso Legal Importante</h2>
                 <h3 class="text-xl text-red-400 font-bold mb-6">APOLOGIA AO NAZISMO É CRIME NO BRASIL</h3>
                 
-                <div class="bg-black/60 p-6 rounded border border-red-800/50 text-left space-y-4 font-mono text-sm text-zinc-300">
+                <div class="bg-black/80 p-6 rounded border border-red-800/50 text-left space-y-4 font-mono text-sm text-zinc-300">
                     <p>
-                        Apoiando, divulgando ou utilizando os símbolos desta ideologia extremista, você está cometendo um crime grave de racismo e ofensa aos direitos humanos.
+                        Apoiar, divulgar ideais ou utilizar os símbolos desta ideologia extremista é um crime grave de racismo e ofensa aos direitos humanos.
                     </p>
-                    <div class="pl-4 border-l-2 border-red-600">
+                    <div class="pl-4 border-l-2 border-red-600 bg-red-950/20 p-4 rounded-r">
                         <p class="text-white font-bold mb-2">Lei Federal nº 7.716, de 5 de janeiro de 1989 (Lei do Racismo)</p>
                         <p class="mb-2"><span class="text-red-400">Art. 20, § 1º:</span> "Fabricar, comercializar, distribuir ou veicular símbolos, emblemas, ornamentos, distintivos ou propaganda que utilizem a cruz suástica ou gamada, para fins de divulgação do nazismo."</p>
-                        <p class="font-bold text-red-500 text-base uppercase mt-3">Pena: Reclusão de dois a cinco anos e multa.</p>
+                        <p class="font-bold text-red-500 text-base uppercase mt-3 pt-3 border-t border-red-900/50">Pena: Reclusão de 2 (dois) a 5 (cinco) anos e multa.</p>
                     </div>
                     <p class="text-xs text-zinc-500 text-center mt-6 uppercase tracking-wider font-sans font-bold">
-                        A internet não é terra sem lei. Discursos de ódio deixam rastros e são investigados pelas autoridades.
+                        A internet não é terra sem lei. Discursos de ódio deixam rastros e são investigados criminalmente pelas autoridades competentes.
                     </p>
                 </div>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-black border-t border-zinc-900 py-12">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h3 class="text-xl font-cinzel text-zinc-300 font-bold mb-4 tracking-widest">MEMÓRIA HISTÓRICA</h3>
             <p class="text-zinc-500 text-sm max-w-2xl mx-auto mb-6">
-                Este projeto tem propósito exclusivamente educacional e de preservação histórica. O estudo do totalitarismo — a censura e bolhas de informação, o roubo da educação e a desumanização de minorias — é vital para proteger os direitos humanos hoje.
+                Este projeto tem propósito exclusivamente educacional e de preservação histórica. O estudo do totalitarismo — a censura de informações externas, a ilusão da normalidade e a desumanização de minorias — é vital para proteger a democracia e os direitos humanos hoje.
             </p>
-            <p class="text-xs text-zinc-600 uppercase tracking-widest font-bold">
+            <p class="text-xs text-red-800 uppercase tracking-widest font-black">
                 A quem esquecer a história, restará o destino de repeti-la.
             </p>
         </div>
@@ -701,12 +738,12 @@
                 rise: "Política de Apaziguamento: Líderes da Europa deram-lhe territórios de presente em Munique, implorando por paz. O seu ego e arrogância explodiram.",
                 fall: "",
                 scale: 0.6,
-                nodes: ['berlin', 'rome'] // Viena tecnicamente anexada
+                nodes: ['berlin', 'rome']
             },
             1939: {
                 title: "Início da Guerra Mundial",
                 desc: "Invasão da Polónia. Pacto secreto de Não Agressão com a União Soviética de Estaline para dividir a Europa.",
-                rise: "Guerra Relâmpago (Blitzkrieg): Uso brutal e combinado de tanques rápidos e bombardeiros aéreos (Luftwaffe) que o mundo nunca tinha visto.",
+                rise: "Guerra Relâmpago (Blitzkrieg): Uso brutal e combinado de tanques rápidos e bombardeiros aéreos que o mundo nunca tinha visto.",
                 fall: "",
                 scale: 1.0,
                 nodes: ['berlin', 'warsaw', 'rome']
@@ -730,16 +767,16 @@
             1942: {
                 title: "O Ponto de Viragem",
                 desc: "Expansão máxima. No entanto, o seu 6º Exército inteiro é cercado pelos soviéticos em Estalinegrado e destruído.",
-                rise: "Início em escala industrial do terror das câmaras de gás.",
+                rise: "Início em escala industrial do terror das câmaras de gás e extermínio maciço.",
                 fall: "Fanatismo letal: O Ditador proibiu os generais de recuarem em Estalinegrado. Perdeu centenas de milhares de tropas veteranas insubstituíveis num único mês.",
                 scale: 2.5,
-                nodes: ['berlin', 'warsaw', 'paris', 'rome', 'stalingrad'] // Quase lá
+                nodes: ['berlin', 'warsaw', 'paris', 'rome', 'stalingrad']
             },
             1943: {
                 title: "O Início do Colapso",
-                desc: "Os soviéticos empurram os alemães impiedosamente pelo Leste. Aliados invadem a Itália (o eixo desmorona a sul).",
+                desc: "Os soviéticos empurram os alemães impiedosamente pelo Leste. Aliados invadem a Itália.",
                 rise: "Goebbels declara 'Guerra Total', arrastando crianças e idosos civis para trabalhar nas fábricas de armas bombardeadas dia e noite.",
-                fall: "Prioridade ao ódio: Em vez de usar comboios de suprimentos para salvar o seu exército a perder, ele usou os comboios para acelerar as deportações do Holocausto.",
+                fall: "Prioridade ao ódio: Em vez de usar comboios de suprimentos para salvar o seu exército a perder no Leste, ele usou a logística ferroviária para acelerar as deportações do Holocausto.",
                 scale: 1.5,
                 nodes: ['berlin', 'warsaw', 'paris']
             },
@@ -747,15 +784,15 @@
                 title: "Cercados (O Dia D)",
                 desc: "Desembarque épico dos Aliados na Normandia (França) a Oeste. Operação Bagration destrói o que restava do exército alemão a Leste.",
                 rise: "",
-                fall: "Perda da realidade: Interferia nas ordens dos generais a partir do bunker. Acreditava num milagre através do uso das suas novas armas secretas (mísseis V1/V2), que não mudaram nada.",
+                fall: "Perda da realidade: Interferia nas ordens dos generais a partir do bunker. Acreditava num milagre através do uso das suas novas armas secretas (mísseis V1/V2), que não mudaram nada o rumo da guerra.",
                 scale: 0.8,
                 nodes: ['berlin', 'warsaw']
             },
             1945: {
-                title: "O Fim Cativante",
-                desc: "Soviéticos tomam Berlim em batalhas rua-a-rua. Hitler suicida-se. Fim do pesadelo.",
+                title: "O Fim do Pesadelo",
+                desc: "Soviéticos tomam Berlim em batalhas rua-a-rua. Hitler suicida-se. Rendição incondicional.",
                 rise: "",
-                fall: "A 'Ordem de Nero': Ordenou a destruição de todas as infraestruturas da Alemanha (pontes, água, fábricas) pois acreditava que o povo alemão 'tinha falhado com ele' e não merecia sobreviver.",
+                fall: "A 'Ordem de Nero': Ordenou a destruição de todas as infraestruturas da Alemanha (pontes, fábricas) pois acreditava que o povo alemão 'tinha falhado' e não merecia sobreviver à derrota.",
                 scale: 0,
                 nodes: []
             }
@@ -770,14 +807,13 @@
         const fallContainer = document.getElementById('fall-container');
         const blob = document.getElementById('axis-blob');
 
-        // All possible nodes
         const nodeIds = ['berlin', 'paris', 'london', 'warsaw', 'moscow', 'rome', 'stalingrad'];
 
         function updateMap() {
             const year = slider.value;
             const data = warData[year];
 
-            // Atualiza Textos
+            // Textos
             displayYear.innerText = year;
             displayTitle.innerText = data.title;
             displayDesc.innerText = data.desc;
@@ -796,57 +832,51 @@
                 fallContainer.style.display = 'none';
             }
 
-            // Atualiza Mancha de Território
+            // Território
             blob.style.transform = `translate(-50%, -50%) scale(${data.scale})`;
 
-            // Atualiza Pinos/Nodos
+            // Pinos Táticos
             nodeIds.forEach(id => {
                 const el = document.getElementById(`node-${id}`);
-                // Estilo default: neutro/apagado
                 el.style.background = '#333';
                 el.style.borderColor = '#000';
                 el.style.boxShadow = 'none';
 
-                // Casos Especiais baseados na história
                 if(id === 'london') {
-                    // Londres nunca caiu
                     if(year >= 1939) {
-                        el.style.background = '#2563eb'; // Aliado Azul
+                        el.style.background = '#2563eb'; // Aliado
                         el.style.borderColor = '#60a5fa';
                         el.style.boxShadow = '0 0 15px #3b82f6';
                     }
                 } else if(id === 'moscow' || id === 'stalingrad') {
                     if ((id === 'moscow' && year == 1941) || (id === 'stalingrad' && year == 1942)) {
-                        el.style.background = '#ef4444'; // Sob ataque frontal
+                        el.style.background = '#ef4444'; // Sob ataque
                         el.style.boxShadow = '0 0 15px #dc2626';
                     } else if (year >= 1943) {
-                        el.style.background = '#2563eb'; // Contra ataque soviético
+                        el.style.background = '#2563eb'; // Aliado avança
                         el.style.borderColor = '#60a5fa';
                         el.style.boxShadow = '0 0 15px #3b82f6';
                     }
                 }
             });
 
-            // Pinta o território ativamente dominado de Vermelho Pulsante
             data.nodes.forEach(id => {
                 const el = document.getElementById(`node-${id}`);
                 if(el && id !== 'london' && id !== 'moscow') {
-                    el.style.background = '#dc2626'; // Vermelho Tático
+                    el.style.background = '#dc2626'; // Eixo / Ocupado
                     el.style.borderColor = '#fca5a5';
                     el.style.boxShadow = '0 0 20px #ef4444';
                 }
             });
 
-            // O colapso final
             if(year == 1945) {
-                document.getElementById('node-berlin').style.background = '#2563eb'; // Ocupada
+                document.getElementById('node-berlin').style.background = '#2563eb'; // Ocupada pelos Aliados/Soviéticos
                 document.getElementById('node-berlin').style.boxShadow = '0 0 15px #3b82f6';
             }
         }
 
         slider.addEventListener('input', updateMap);
         updateMap();
-
     </script>
 </body>
 </html>
